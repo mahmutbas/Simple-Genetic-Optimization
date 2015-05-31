@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane blendMode="DARKEN" opacity="0.78" prefHeight="466.0" prefWidth="799.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.optimization.genetic.FormController">
+   <children>
+      <Label layoutX="33.0" layoutY="32.0" styleClass="lblGreen" text="Popülasyon Sayısı:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtPopulasyon" layoutX="163.0" layoutY="29.0" opacity="0.85" prefHeight="25.0" prefWidth="68.0" promptText="100" text="100">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#aff5a1" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="33.0" layoutY="68.0" styleClass="lblGreen" text="Jenerasyon Sayısı:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtJenerasyon" layoutX="163.0" layoutY="65.0" opacity="0.85" prefHeight="25.0" prefWidth="68.0" promptText="150" text="150">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#aff5a1" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="33.0" layoutY="104.0" styleClass="lblGreen" text="Çaprazlama Oranı:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCaprazlama" layoutX="163.0" layoutY="101.0" opacity="0.85" prefHeight="25.0" prefWidth="68.0" promptText="90" text="90">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#aff5a1" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="33.0" layoutY="138.0" styleClass="lblGreen" text="Mutasyon Oranı:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMutasyon" layoutX="163.0" layoutY="135.0" opacity="0.85" prefHeight="25.0" prefWidth="68.0" promptText="1" text="1">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Shadow>
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#aff5a1" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="34.0" layoutY="176.0" styleClass="lblGreen" text="Çaprazlama Şekli:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="208.0" styleClass="lblGreen" text="Seçim Şekli:" textFill="#e3a61b">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRun" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnRunHandle" opacity="0.84" prefHeight="37.0" prefWidth="254.0" text="Optimize Et" textFill="#3690ff">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <AreaChart fx:id="areaChart" layoutX="288.0" layoutY="10.0" prefHeight="291.0" prefWidth="500.0">
+         <xAxis><NumberAxis label="Values for X-Axis" lowerBound="0" tickUnit="1" upperBound="1" /></xAxis>
+        <yAxis><NumberAxis label="Values for Y-Axis" lowerBound="0" tickUnit="1" upperBound="1" /></yAxis>
+      </AreaChart>
+      <Label layoutX="163.0" layoutY="177.0" text="Çift Noktalı" />
+      <Label layoutX="161.0" layoutY="209.0" text="Rank Seçimi" />
+      <TextArea fx:id="txtFlow" blendMode="EXCLUSION" layoutX="15.0" layoutY="291.0" opacity="0.81" prefHeight="171.0" prefWidth="771.0" />
+   </children>
+</AnchorPane>
