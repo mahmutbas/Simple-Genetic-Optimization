@@ -6,5 +6,5 @@ public class GData {
 	int jenerasyon;
 	int birey;
 	double uygunluk;
-	
+	//aciklama
 }
